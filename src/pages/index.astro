@@ -1,0 +1,447 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
+---
+<Layout>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="header" id="site-header">
+    <a class="header__logo" href="#top" aria-label="SOLACT">
+      <img src={`${base}images/logo.png`} alt="SOLACT" />
+      <span>SOLACT</span>
+    </a>
+    <nav class="header__nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#values">Values</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============================== HERO ============================== -->
+  <section id="about" class="hero" data-screen-label="01 Hero">
+    <div class="container hero__top">
+      <div class="hero__logo">
+        <span class="hero__logo-ring" aria-hidden="true"></span>
+        <img src={`${base}images/logo.png`} alt="SOLACT logo" />
+      </div>
+      <div class="hero__msg">
+        <span class="hero__eyebrow">Our Message</span>
+        <h1 class="hero__headline">
+          <span class="line">採用に、</span>
+          <span class="line"><span class="accent">嘘</span>はいらない。</span>
+        </h1>
+        <p class="hero__sub">
+          学歴でも肩書きでもなく、行動が示す本質を。<br />
+          SOLACTは、第三者証明された行動実績で、人と組織の出会いを変えていきます。
+        </p>
+      </div>
+    </div>
+
+    <div class="container hero__vision">
+      <div class="vision-hero reveal" id="vision">
+        <div class="vision-hero__bg" aria-hidden="true">
+          <span class="vision-hero__sun"></span>
+          <span class="vision-hero__wave"></span>
+        </div>
+        <div class="vision-hero__head">
+          <span class="vision-hero__label"><i></i>Our Vision <span class="vision-hero__index-inline">— 02 / Vision</span></span>
+        </div>
+        <h2 class="vision-hero__statement">
+          <span class="vh-line" data-d=".05">行動が、</span>
+          <span class="vh-line" data-d=".18">人の<em>本質</em>を</span>
+          <span class="vh-line" data-d=".30">照らす。</span>
+        </h2>
+
+        <div class="vision-hero__lighthouse" aria-hidden="true">
+          <svg viewBox="0 0 220 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g class="lh-beams" opacity="0.55">
+              <path d="M110 90 L20 30 L20 60 Z" fill="url(#lh-beam)" />
+              <path d="M110 90 L200 30 L200 60 Z" fill="url(#lh-beam)" />
+              <path d="M110 90 L0 90 L0 100 Z" fill="url(#lh-beam)" />
+              <path d="M110 90 L220 90 L220 100 Z" fill="url(#lh-beam)" />
+            </g>
+            <circle class="lh-orb" cx="110" cy="90" r="14" fill="url(#lh-orb)" />
+            <circle cx="110" cy="90" r="6" fill="#fff" />
+            <path d="M92 78 L110 56 L128 78 Z" fill="currentColor" opacity="0.85" />
+            <circle cx="110" cy="52" r="2.5" fill="currentColor" />
+            <line x1="110" y1="50" x2="110" y2="42" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+            <rect x="96" y="78" width="28" height="22" rx="2" stroke="currentColor" stroke-width="1.6" fill="oklch(0.972 0.007 208.8)" />
+            <line x1="110" y1="78" x2="110" y2="100" stroke="currentColor" stroke-width="1" />
+            <rect x="92" y="100" width="36" height="6" rx="1" stroke="currentColor" stroke-width="1.4" fill="oklch(0.972 0.007 208.8)" />
+            <path d="M98 106 L94 220 L126 220 L122 106 Z" stroke="currentColor" stroke-width="1.6" fill="#fff" />
+            <path d="M97 130 L123 130 M96 158 L124 158 M95 188 L125 188" stroke="currentColor" stroke-width="1.4" opacity="0.65" />
+            <path d="M104 220 L104 200 Q110 192 116 200 L116 220 Z" stroke="currentColor" stroke-width="1.4" fill="oklch(0.554 0.086 205.3 / 0.18)" />
+            <rect x="86" y="220" width="48" height="10" rx="2" stroke="currentColor" stroke-width="1.6" fill="oklch(0.972 0.007 208.8)" />
+            <path d="M40 240 Q70 222 100 232 Q140 218 180 234 Q200 240 210 248 L210 252 L40 252 Z" fill="currentColor" opacity="0.18" />
+            <path d="M70 240 Q100 230 130 238 Q160 230 190 242" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.45" />
+            <g opacity="0.5" stroke="currentColor" fill="none" stroke-width="1.2" stroke-linecap="round">
+              <path class="lh-wave-1" d="M0 268 Q22 262 44 268 T88 268 T132 268 T176 268 T220 268" />
+              <path class="lh-wave-2" d="M0 282 Q22 276 44 282 T88 282 T132 282 T176 282 T220 282" />
+              <path class="lh-wave-3" d="M0 296 Q22 290 44 296 T88 296 T132 296 T176 296 T220 296" />
+            </g>
+            <g class="lh-birds" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.5">
+              <path d="M30 40 q4 -3 8 0 q4 -3 8 0" />
+              <path d="M180 56 q3 -2 6 0 q3 -2 6 0" />
+            </g>
+            <defs>
+              <linearGradient id="lh-beam" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="currentColor" stop-opacity="0.6" />
+                <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+              </linearGradient>
+              <radialGradient id="lh-orb">
+                <stop offset="0" stop-color="#fff" stop-opacity="1" />
+                <stop offset="0.5" stop-color="currentColor" stop-opacity="0.7" />
+                <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="vision-hero__cols">
+          <div class="vh-col">
+            <span class="vh-col__num">01</span>
+            <h3 class="vh-col__head">行動を、根拠にする。</h3>
+            <p class="vh-col__body">学歴でも、肩書きでもなく、その人が積み上げてきた行動を、採用の根拠にする。</p>
+          </div>
+          <div class="vh-col">
+            <span class="vh-col__num">02</span>
+            <h3 class="vh-col__head">第三者が、証明する。</h3>
+            <p class="vh-col__body">第三者が証明したボランティア実績、40問の診断が導き出す適性。自己申告ではない、本当の姿で評価される世界へ。</p>
+          </div>
+          <div class="vh-col">
+            <span class="vh-col__num">03</span>
+            <h3 class="vh-col__head">本質を、照らす。</h3>
+            <p class="vh-col__body">Solas（光）と Act（行動）。私たちは「行動実績」という光で、本来見えるはずだった人の本質を照らします。</p>
+          </div>
+        </div>
+
+        <div class="vision-hero__cta">
+          <a class="pill pill--solid" href="#story">
+            <span class="pill__label">Read the Story</span>
+            <span class="pill__icon" aria-hidden="true"></span>
+          </a>
+          <a class="pill" href="#services">
+            <span class="pill__label">See Services</span>
+            <span class="pill__icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">Scroll</div>
+  </section>
+
+  <!-- ============================== SERVICES ============================== -->
+  <section id="services" class="section" data-screen-label="02 Services">
+    <div class="container services-grid">
+      <div class="services-intro">
+        <header class="sect-head reveal">
+          <span class="sect-head__index">03 — Services</span>
+          <h2 class="sect-head__en">Services</h2>
+          <span class="sect-head__jp">サービス</span>
+        </header>
+        <p class="services-intro__lede">
+          診断から行動実績まで、本質で選ばれる採用を支える4つのプロダクト。
+        </p>
+        <div class="services-intro__count"><strong>04</strong>products</div>
+      </div>
+
+      <ul class="services-list reveal reveal-stagger">
+        <li><a class="service" href="#services">
+          <span class="service__num">01</span>
+          <div class="service__body">
+            <h3 class="service__name">ソラタイプ診断<em>Sora Type</em></h3>
+            <p class="service__desc">40問で、キャリアの迷いを整理する。</p>
+          </div>
+        </a></li>
+        <li><a class="service" href="#services">
+          <span class="service__num">02</span>
+          <div class="service__body">
+            <h3 class="service__name">SoraVet<em>ソラベット</em></h3>
+            <p class="service__desc">学生も、病院も、診断で選ぶ。</p>
+          </div>
+        </a></li>
+        <li><a class="service" href="#services">
+          <span class="service__num">03</span>
+          <div class="service__body">
+            <h3 class="service__name">SoraBiz<em>ソラビズ</em></h3>
+            <p class="service__desc">根拠のある実績が、正しい採用判断を生む。</p>
+          </div>
+        </a></li>
+        <li><a class="service" href="#services">
+          <span class="service__num">04</span>
+          <div class="service__body">
+            <h3 class="service__name">SoraGuild<em>ソラギルド</em></h3>
+            <p class="service__desc">ひとつひとつのクエストが、実績になる。</p>
+          </div>
+        </a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================== VALUES ============================== -->
+  <section id="values" class="section section--mat" data-screen-label="03 Values">
+    <div class="container values-grid">
+      <div>
+        <header class="sect-head reveal">
+          <span class="sect-head__index">04 — Values</span>
+          <h2 class="sect-head__en">SOLACT<br />Values</h2>
+          <span class="sect-head__jp">私たちが大切にしている3つの価値観</span>
+        </header>
+        <p class="values-intro__lede">
+          「採用に、嘘はいらない」を実現するために、<br />
+          私たちが事業の土台に据える行動指針です。
+        </p>
+      </div>
+
+      <ul class="values-list reveal reveal-stagger">
+        <li class="value">
+          <span class="value__num">1</span>
+          <span class="value__jp">行動が証明する</span>
+          <span class="value__en">Action Proves</span>
+        </li>
+        <li class="value">
+          <span class="value__num">2</span>
+          <span class="value__jp">本質を照らす</span>
+          <span class="value__en">Illuminate Essence</span>
+        </li>
+        <li class="value">
+          <span class="value__num">3</span>
+          <span class="value__jp">公平にアクセスする</span>
+          <span class="value__en">Fair Access</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================== STORY ============================== -->
+  <section id="story" class="section" data-screen-label="04 Story">
+    <div class="container story-grid">
+      <div class="story-head reveal">
+        <header class="sect-head reveal">
+          <span class="sect-head__index">05 — Story</span>
+          <h2 class="sect-head__en">Story</h2>
+          <span class="sect-head__jp">創業のストーリー</span>
+        </header>
+        <div class="story__art" aria-hidden="true">
+          <svg viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="110" cy="120" r="86" stroke="currentColor" stroke-width="1" opacity="0.18" fill="none" />
+            <circle cx="110" cy="120" r="68" stroke="currentColor" stroke-width="1" opacity="0.12" fill="none" stroke-dasharray="2 4" />
+            <g class="story-anchor" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="110" cy="68" r="6" />
+              <line x1="92" y1="84" x2="128" y2="84" />
+              <line x1="96" y1="80" x2="124" y2="80" />
+              <line x1="110" y1="76" x2="110" y2="158" />
+              <path d="M110 158 Q110 178 88 178" />
+              <path d="M110 158 Q110 178 132 178" />
+              <path d="M88 178 L80 168 L86 184 Z" fill="currentColor" fill-opacity="0.85" />
+              <path d="M132 178 L140 168 L134 184 Z" fill="currentColor" fill-opacity="0.85" />
+              <circle cx="110" cy="82" r="2" fill="currentColor" />
+            </g>
+            <path class="story-rope" d="M110 62 Q90 50 86 36 Q84 24 96 22 Q108 22 108 32"
+              stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55"
+              stroke-dasharray="3 3" />
+            <g class="story-waves" stroke="currentColor" fill="none" stroke-width="1.2" stroke-linecap="round" opacity="0.5">
+              <path d="M10 210 Q30 204 50 210 T90 210 T130 210 T170 210 T210 210" />
+              <path d="M10 226 Q30 220 50 226 T90 226 T130 226 T170 226 T210 226" opacity="0.7" />
+              <path d="M10 242 Q30 236 50 242 T90 242 T130 242 T170 242 T210 242" opacity="0.5" />
+              <path d="M10 258 Q30 252 50 258 T90 258 T130 258 T170 258 T210 258" opacity="0.35" />
+            </g>
+            <g class="story-boat" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55">
+              <path d="M40 200 L52 200 L50 206 L42 206 Z" fill="currentColor" fill-opacity="0.6" />
+              <line x1="46" y1="200" x2="46" y2="186" />
+              <path d="M46 188 L54 198 L46 198 Z" fill="currentColor" fill-opacity="0.4" />
+            </g>
+            <text x="110" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" font-weight="600" fill="currentColor" opacity="0.45" letter-spacing="2">N</text>
+          </svg>
+        </div>
+      </div>
+      <div class="story-body reveal">
+        <blockquote class="story__quote">
+          <span class="story__quote-en">Founder's voice</span>
+          <p class="story__quote-jp">その人の本質を、<br />採用に届ける仕組みを</p>
+        </blockquote>
+
+        <div class="story__chapters">
+          <article class="story__chapter story__chapter--lead">
+            <h4><span class="kanji">01</span>3つの就職活動、3つのもどかしさ。</h4>
+            <p>就職活動で、3種類の「もどかしさ」を経験しました。それぞれの現場で、別のかたちの違和感が、ずっと心に残っていました。</p>
+          </article>
+
+          <div class="story__divider" aria-hidden="true"><span></span><span></span><span></span></div>
+
+          <article class="story__chapter">
+            <h4><span class="kanji">02</span>理系企業 ─ 会う前に、どう証明する？</h4>
+            <p>面接にたどり着く前に、書類で落とされることが続きました。話してみれば内定をもらえることが多かっただけに、「会う前に、どうやって自分を証明すればいいんだろう」と、ずっと考えていました。</p>
+          </article>
+
+          <article class="story__chapter">
+            <h4><span class="kanji">03</span>文系企業 ─ 言葉だけでは届かない。</h4>
+            <p>「自分が何をやってきたか」を、言葉だけで伝えるしかありませんでした。どれだけ真剣に話しても、それが本当に届いているかどうかわからない。企業も学生も、手探りのまま決めていくような感覚がありました。</p>
+          </article>
+
+          <article class="story__chapter">
+            <h4><span class="kanji">04</span>動物病院 ─ 求める側と、求められる側。</h4>
+            <p>動物病院の就職活動では、また別の景色がありました。実習に行けばほぼ内定が出るほど人を必要としているのに、採用コストは高く、地方の病院には若い人材がなかなか届かない。求める側と求められる側が、うまくつながれていない現状がありました。</p>
+          </article>
+
+          <div class="story__question">
+            <span class="story__question-label">— A question</span>
+            <p class="story__question-text">「その人の本質を、採用に<br />届ける仕組みはつくれないか。」</p>
+          </div>
+
+          <p class="story__sign"><span class="story__sign-line"></span><span class="story__sign-text">SOLACT は、その問いから生まれました。<small>— Origin of SOLACT</small></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT ============================== -->
+  <section id="contact" class="section section--mat" data-screen-label="05 Contact">
+    <div class="container contact-grid">
+      <div>
+        <header class="sect-head reveal">
+          <span class="sect-head__index">06 — Contact</span>
+          <h2 class="sect-head__en">Contact</h2>
+          <span class="sect-head__jp">お問い合わせ</span>
+        </header>
+      </div>
+      <div class="reveal">
+        <h3 class="contact-body__title">
+          ご相談・取材・パートナー連携、<br />お気軽にお問い合わせください。
+        </h3>
+        <p class="contact-body__lede">
+          事業内容・提携・採用についてのご質問は、下記メールアドレスまでご連絡ください。原則として、3営業日以内にご返信いたします。
+        </p>
+
+        <a class="contact-card" href="mailto:info@solact.jp">
+          <span class="contact-card__label">Email</span>
+          <span class="contact-card__email">
+            info@solact.jp
+            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 18 L18 4 M9 4 H18 V13" /></svg>
+          </span>
+        </a>
+
+        <div class="contact-actions">
+          <a class="pill" href="mailto:info@solact.jp">
+            <span class="pill__label">Send Email</span>
+            <span class="pill__icon" aria-hidden="true"></span>
+          </a>
+          <a class="pill" href="#story">
+            <span class="pill__label">Read our Story</span>
+            <span class="pill__icon" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FOOTER ============================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <a class="footer__brand-logo" href="#top">
+            <img src={`${base}images/logo.png`} alt="SOLACT" />
+            <span>SOLACT</span>
+          </a>
+          <p>Solas（光）と Act（行動）から生まれた、行動実績ベースの採用プラットフォーム。</p>
+        </div>
+        <div class="footer__columns">
+          <div class="footer__col">
+            <h4>Sitemap</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#values">Values</a></li>
+              <li><a href="#story">Story</a></li>
+              <li><a href="mailto:info@solact.jp">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="mailto:info@solact.jp">info@solact.jp</a></li>
+              <li><a href="#">X (Twitter)</a></li>
+              <li><a href="#">note</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <ul class="footer__legal">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+        <span class="footer__copy">© 2026 SOLACT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    // Header scrolled state
+    const header = document.getElementById('site-header');
+    const progressEl = document.getElementById('scroll-progress');
+    const heroLogo = document.querySelector('.hero__logo');
+    const heroLogoRing = document.querySelector('.hero__logo-ring');
+    const visionSun = document.querySelector('.vision-hero__sun');
+    const visionWave = document.querySelector('.vision-hero__wave');
+
+    let ticking = false;
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const y = window.scrollY;
+          const docH = document.documentElement.scrollHeight - window.innerHeight;
+          const pct = Math.max(0, Math.min(100, (y / docH) * 100));
+          if (progressEl) progressEl.style.width = pct + '%';
+
+          if (header) {
+            if (y > 100) header.classList.add('is-scrolled');
+            else header.classList.remove('is-scrolled');
+          }
+
+          if (heroLogo) {
+            const t = Math.min(1, y / 600);
+            heroLogo.style.transform = `translateY(${y * 0.18}px) scale(${1 - t * 0.04})`;
+            if (heroLogoRing) heroLogoRing.style.transform = `scale(${1 + t * 0.15})`;
+          }
+
+          if (visionSun) {
+            const r = visionSun.getBoundingClientRect();
+            const visible = window.innerHeight - r.top;
+            const v = Math.max(-200, Math.min(200, visible * 0.08));
+            visionSun.style.transform = `translateY(${-v}px)`;
+          }
+          if (visionWave) {
+            const r = visionWave.getBoundingClientRect();
+            const visible = window.innerHeight - r.top;
+            const v = Math.max(-200, Math.min(200, visible * 0.05));
+            visionWave.style.transform = `translateY(${v}px)`;
+          }
+
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // IntersectionObserver reveal
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+</Layout>
